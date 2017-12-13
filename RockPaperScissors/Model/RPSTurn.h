@@ -7,7 +7,7 @@
 //
 
 typedef enum Move {
-    Rock, Paper, Scissors
+    Rock, Paper, Scissors, Invalid
 } Move;
 
 #import <Foundation/Foundation.h>
