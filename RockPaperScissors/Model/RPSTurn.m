@@ -10,8 +10,6 @@
 
 @implementation RPSTurn
 
-@property (nonatomic) Move move;
-
 -(instancetype) initWithMove: (Move) move {
     
     self = [super init];
@@ -27,7 +25,7 @@
     return Rock;
 }
 
--(BOOL) defeats: (Play *) opponent {
+-(BOOL) defeats: (RPSTurn *) opponent {
     return false;
 }
 
