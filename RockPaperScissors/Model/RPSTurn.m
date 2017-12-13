@@ -23,4 +23,12 @@
     return self;
 }
 
+-(Move) generateMove {
+    return Rock;
+}
+
+-(BOOL) defeats: (Play *) opponent {
+    return false;
+}
+
 @end
