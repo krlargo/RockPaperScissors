@@ -23,4 +23,30 @@
     return self;
 }
 
+-(RPSTurn *) winner {
+    if([self.firstTurn defeats:self.secondTurn]) {
+        return self.firstTurn;
+    } else {
+        return self.secondTurn;
+    }
+}
+
+-(RPSTurn *) loser {
+    if([self.firstTurn defeats:self.secondTurn]) {
+        return self.secondTurn;
+    } else {
+        return self.firstTurn;
+    }
+}
+
+-(NSString *) resultsString: (RPSGame *) game {
+    if(self.firstTurn == [self winner]) {
+        return @"You win!";
+    } else if(self.firstTurn == [self loser]) {
+        return @"You lose.";
+    } else {
+        return @"Invalid";
+    }
+}
+
 @end
