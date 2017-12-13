@@ -7,11 +7,9 @@
 //
 
 #import "RPSGame.h"
+#import "RPSTurn.h"
 
 @implementation RPSGame
-
-@property (nonatomic) RPSTurn *firstTurn;
-@property (nonatomic) RPSTurn *secondTurn;
 
 -(instancetype) initWithFirstTurn: (RPSTurn*) firstTurn
                        secondTurn: (RPSTurn*) secondTurn {
