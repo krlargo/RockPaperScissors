@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RPSTurn.h"
 
 @interface RPSGame : NSObject
+
+-(instancetype) initWithFirstTurn: (RPSTurn*) firstTurn secondTurn: (RPSTurn*) secondTurn;
 
 @end
