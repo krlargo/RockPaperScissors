@@ -19,4 +19,22 @@
                                         secondTurn:computersTurn];
 }
 
+-(NSString*) messageForGame: (RPSGame*) game {
+    NSString *outcomeString;
+    if(![game.firstTurn defeats:game.secondTurn] &&
+       ![game.secondTurn defeats:game.firstTurn]) {
+        return [NSString stringWithFormat: @"You both chose %@; It's a Tie!", game.winner];
+    } else if([game.firstTurn defeats:game.secondTurn]) {
+        outcomeString = @"You win!";
+    } else if([game.secondTurn defeats:game.firstTurn]) {
+        outcomeString = @"You lose!";
+    }
+    
+    NSString *winnerString = [[game winner] description];
+    NSString *loserString = [[game loser] description];
+    NSString *resultsString = [NSString stringWithFormat:@"%@ defeats %@, %@", winnerString, loserString, outcomeString];
+
+    return resultsString;
+}
+
 @end
