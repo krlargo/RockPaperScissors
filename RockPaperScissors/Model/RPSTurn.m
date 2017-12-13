@@ -51,7 +51,13 @@
 }
 
 -(BOOL) defeats: (RPSTurn *) opponent {
-    return false;
+    if((self.move == Rock && opponent.move == Scissors) ||
+       (self.move == Paper && opponent.move == Rock) ||
+       (self.move == Scissors && opponent.move == Paper)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 @end
